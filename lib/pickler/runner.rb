@@ -492,7 +492,7 @@ Requires launchy (gem install launchy).
       command = @argv.shift
       if klass = self.class[command]
         result = klass.new(@argv).run
-        exit result.respond_to?(:to_int) ? result.to_int : 0
+        Kernel.exit result.respond_to?(:to_int) ? result.to_int : 0
       elsif ['help', '--help', '-h', '', nil].include?(command)
         puts "usage: pickler <command> [options] [arguments]"
         puts
@@ -507,10 +507,10 @@ Requires launchy (gem install launchy).
       end
     rescue Pickler::Error
       $stderr.puts "#$!"
-      exit 1
+      Kernel.exit 1
     rescue Interrupt
       $stderr.puts "Interrupted!"
-      exit 130
+      Kernel.exit 130
     end
 
   end

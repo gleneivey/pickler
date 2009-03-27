@@ -1,0 +1,28 @@
+#  
+
+
+Feature:  Fire photon torpedoes
+  In order to defend my ship,
+  as a Captain, I want
+  to be able to shoot torpedoes
+
+
+  Scenario:  Fire Torpedoes
+    Given an other starship nearby
+    And I've ordered weapons-lock
+    When I give the Fire command
+    Then torpedoes are lanched
+    And the other starship is hit
+
+
+  Scenario:  Launch from Torpedoe Tube
+    Given a warhead-less torpedoe
+    And it is loaded in the torpedoe tubes
+    And a destination course has been set
+    When I give the Fire command
+    The torpedoe is launched
+    And it doesn't explode
+    And it travels to its destination
+
+
+# Hey, look, some end-of-file comments.....

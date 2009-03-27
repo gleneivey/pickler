@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+Content-type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<story>
+  <id type="integer">535216</id>
+  <story_type>feature</story_type>
+  <url>http://www.pivotaltracker.com/story/show/535216</url>
+  <estimate type="integer">-1</estimate>
+  <current_state>unscheduled</current_state>
+  <description>  In order to defend my ship,
+  as a Captain, I want
+  to be able to shoot torpedoes
+
+
+  Scenario:  Fire Torpedoes
+    Given an other starship nearby
+    And I've ordered weapons-lock
+    When I give the Fire command
+    Then torpedoes are lanched
+    And the other starship is hit
+
+
+  Scenario:  Launch from Torpedoe Tube
+    Given a warhead-less torpedoe
+    And it is loaded in the torpedoe tubes
+    And a destination course has been set
+    When I give the Fire command
+    The torpedoe is launched
+    And it doesn't explode
+    And it travels to its destination
+
+
+# Hey, look, some end-of-file comments.....
+</description>
+  <name>Fire photon torpedoes</name>
+  <requested_by>Glen E. Ivey</requested_by>
+  <created_at type="datetime">2009/03/27 01:37:59 GMT</created_at>
+</story>

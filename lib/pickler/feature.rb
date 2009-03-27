@@ -69,7 +69,7 @@ class Pickler
 
     def push
       body = local_body
-      return if story.to_s(pickler.format) == body.to_s
+      return if !story.nil? && story.to_s(pickler.format) == body.to_s
       if story
         story.to_s = body
         story.save!
