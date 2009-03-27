@@ -171,14 +171,18 @@ class Pickler
           initialize(project, response["story"])
           true
         else
-          Array(response["errors"]["error"])
+          if !response["errors"].nil?
+            Array(response["errors"]["error"])
+          else
+            [ "Received bad reply from web, but no explicit error message." ]
+          end
         end
       end
 
       def save!
         errors = save
         if errors != true
-          raise Pickler::Tracker::Error, Array(error).join("\n"), caller
+          raise Pickler::Tracker::Error, Array(errors).join("\n"), caller
         end
         self
       end
