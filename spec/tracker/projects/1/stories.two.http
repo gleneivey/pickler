@@ -34,6 +34,6 @@ Content-type: application/xml
 # Hey, look, some end-of-file comments.....
 </description>
   <name>Fire photon torpedoes</name>
-  <requested_by>Glen E. Ivey</requested_by>
+  <requested_by>James Kirk</requested_by>
   <created_at type="datetime">2009/03/27 01:37:59 GMT</created_at>
 </story>

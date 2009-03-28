@@ -52,4 +52,14 @@ describe Pickler, "when pushing a new .feature file" do
     rescue SystemExit
     end
   end
+
+  it "should update the .feature with the new story's URL" do
+    begin
+      Pickler.run([ "push", @testFeaturePath ])
+    rescue SystemExit
+    end
+
+    File.open(@testFeaturePath).gets.chomp.should eql(
+      "# http://www.pivotaltracker.com/story/show/535216" )
+  end
 end
