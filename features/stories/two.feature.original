@@ -1,5 +1,7 @@
 #  
-Feature: Fire photon torpedoes
+
+
+Feature:  Fire photon torpedoes
   In order to defend my ship,
   as a Captain, I want
   to be able to shoot torpedoes

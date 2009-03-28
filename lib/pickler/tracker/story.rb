@@ -101,7 +101,8 @@ class Pickler
           self.labels = body[/\A@.*/].split(/\s+/)[1..-1].map {|l| l[1..-1].tr(' _','_,')}
         end
         body = body.sub(/\A(?:[@#].*\n)+/,'')
-        if body =~ /\A(\w+): (.*)/
+        body = body.sub(/\A(?:\s*\n)+/,'')
+        if body =~ /\A(\w+):\s+(.*)/
           self.story_type = $1.downcase
           self.name = $2
           description = $'
