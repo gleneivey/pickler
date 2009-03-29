@@ -1,0 +1,10 @@
+# http://www.pivotaltracker.com/story/show/1
+Feature: More power to shields
+  In order to have a test case,
+  as a developer, I write
+  this story with the word "Scenario" in it
+
+  Scenario: have a keyword present
+    Given a scenario
+    When this gets parsed
+    Then I win

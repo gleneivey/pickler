@@ -6,13 +6,14 @@
     <url>http://www.pivotaltracker.com/story/show/1</url>
     <estimate type="integer">1</estimate>
     <current_state>accepted</current_state>
-    <description>  In order to have a test case,
-  as a developer, I write
-  this story with the word "Scenario" in it
+    <description>In order to have a test case,
+as a developer, I write
+this story with the word "Scenario" in it
 
-  Scenario: have a keyword present
-    Given a scenario
-    I win
+Scenario: have a keyword present
+  Given a scenario
+  When this gets parsed
+  Then I win
 </description>
     <name>More power to shields</name>
     <requested_by>James Kirk</requested_by>
@@ -34,25 +35,25 @@
     <url>http://www.pivotaltracker.com/story/show/2</url>
     <estimate type="integer">-1</estimate>
     <current_state>unscheduled</current_state>
-    <description>  In order to defend my ship,
-  as a Captain, I want
-  to be able to shoot torpedoes
+    <description>In order to defend my ship,
+as a Captain, I want
+to be able to shoot torpedoes
 
-  Scenario:  Fire Torpedoes
-    Given an other starship nearby
-    And I've ordered weapons-lock
-    When I give the Fire command
-    Then torpedoes are lanched
-    And the other starship is hit
+Scenario:  Fire Torpedoes
+  Given an other starship nearby
+  And I've ordered weapons-lock
+  When I give the Fire command
+  Then torpedoes are lanched
+  And the other starship is hit
 
-  Scenario:  Launch from Torpedoe Tube
-    Given a warhead-less torpedoe
-    And it is loaded in the torpedoe tubes
-    And a destination course has been set
-    When I give the Fire command
-    The torpedoe is launched
-    And it doesn't explode
-    And it travels to its destination
+Scenario:  Launch from Torpedoe Tube
+  Given a warhead-less torpedoe
+  And it is loaded in the torpedoe tubes
+  And a destination course has been set
+  When I give the Fire command
+  The torpedoe is launched
+  And it doesn't explode
+  And it travels to its destination
 
 # Hey, look, some end-of-file comments.....
 </description>
@@ -68,10 +69,10 @@
     <url>http://www.pivotaltracker.com/story/show/3</url>
     <estimate type="integer">2</estimate>
     <current_state>unstarted</current_state>
-    <description>  Scenario: Travel Faster than Light
-    Given a previous course order
-    When I say "Engage"
-    Then there will be streaky lights in the screen
+    <description>Scenario: Travel Faster than Light
+  Given a previous course order
+  When I say "Engage"
+  Then there will be streaky lights in the screen
 </description>
     <name>Warp Factor One</name>
     <requested_by>Jean Luc Piccard</requested_by>
@@ -93,7 +94,7 @@
     <url>http://www.pivotaltracker.com/story/show/4</url>
     <estimate type="integer">0</estimate>
     <current_state>finished</current_state>
-    <description>  Scenario: Yet More Starship Navigation
+    <description>Scenario: Yet More Starship Navigation
 </description>
     <name>Feature 4</name>
     <requested_by>Jean Luc Piccard</requested_by>
@@ -115,9 +116,9 @@
     <url>http://www.pivotaltracker.com/story/show/5</url>
     <estimate type="integer">3</estimate>
     <current_state>started</current_state>
-    <description>  Scenario: Last, best hope for peace
+    <description>Scenario: Last, best hope for peace
 
-  Scenario: Last, best hope for victory
+Scenario: Last, best hope for victory
 
 </description>
     <name>Babylon 5</name>
@@ -140,7 +141,7 @@
     <url>http://www.pivotaltracker.com/story/show/6</url>
     <estimate type="integer">2</estimate>
     <current_state>delivered</current_state>
-    <description>  Scenario: Access Defense Mainframe
+    <description>Scenario: Access Defense Mainframe
 </description>
     <name>Six's Secret Mission</name>
     <requested_by>The Cylon</requested_by>
@@ -162,10 +163,10 @@
     <url>http://www.pivotaltracker.com/story/show/7</url>
     <estimate type="integer">1</estimate>
     <current_state>rejected</current_state>
-    <description>  Scenario: No Nukes In Space
-    Given Suicidal Cold War
-    When I Stop Deployment of Space Weapons
-    Then the Human Race Should Survive the '60s
+    <description>Scenario: No Nukes In Space
+  Given Suicidal Cold War
+  When I Stop Deployment of Space Weapons
+  Then the Human Race Should Survive the '60s
 </description>
     <name>Assignment: Earth</name>
     <requested_by>Aegis</requested_by>

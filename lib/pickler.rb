@@ -120,7 +120,7 @@ class Pickler
 
   def scenario_features
     project.stories(scenario_word, :includedone => true).reject do |s|
-      %(unscheduled unstarted).include?(s.current_state)
+      [ 'unscheduled', 'unstarted' ].include?(s.current_state)
     end.select do |s|
       s.to_s =~ /^\s*#{Regexp.escape(scenario_word)}:/ && parser.parse(s.to_s)
     end

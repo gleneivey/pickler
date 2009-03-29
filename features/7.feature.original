@@ -1,0 +1,6 @@
+# http://www.pivotaltracker.com/story/show/7
+Feature: Assignment: Earth
+  Scenario: No Nukes In Space
+    Given Suicidal Cold War
+    When I Stop Deployment of Space Weapons
+    Then the Human Race Should Survive the '60s
