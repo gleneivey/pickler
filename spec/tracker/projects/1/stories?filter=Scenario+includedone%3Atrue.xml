@@ -180,4 +180,28 @@ Scenario: Last, best hope for victory
     </iteration>
     <labels>label 1</labels>
   </story>
+
+
+  <story>
+    <id type="integer">8</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/8</url>
+    <estimate type="integer">3</estimate>
+    <current_state>started</current_state>
+    <description>Scenario: Actually, not a scenario
+  Given that I'm a little confused
+  I write a badly formed story
+</description>
+    <name>Not for Cucumber</name>
+    <requested_by>James Kirk</requested_by>
+    <owned_by>Spock</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>3</number>
+      <start type="datetime">2008/10/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/10/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>label 2</labels>
+  </story>
 </stories>

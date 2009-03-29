@@ -60,6 +60,7 @@ describe Pickler, "when pulling all features from Tracker" do
 
     File.exist?( @featuresPath + "2.feature" ).should be_false
     File.exist?( @featuresPath + "3.feature" ).should be_false
+    File.exist?( @featuresPath + "8.feature" ).should be_false
     [ 1, 4, 5, 6, 7 ].each do |feat|
       File.readlines( @featuresPath + feat.to_s + ".feature").should eql(
         File.readlines( @featuresPath + feat.to_s + ".feature.original") )
