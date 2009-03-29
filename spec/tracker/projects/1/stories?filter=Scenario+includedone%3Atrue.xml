@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stories type="array" total="7" count="7">
+  <story>
+    <id type="integer">1</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/1</url>
+    <estimate type="integer">1</estimate>
+    <current_state>accepted</current_state>
+    <description>  In order to have a test case,
+  as a developer, I write
+  this story with the word "Scenario" in it
+
+  Scenario: have a keyword present
+    Given a scenario
+    I win
+</description>
+    <name>More power to shields</name>
+    <requested_by>James Kirk</requested_by>
+    <owned_by>Montgomery Scott</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>1</number>
+      <start type="datetime">2008/09/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/09/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>label 1,label 2,label 3</labels>
+  </story>
+
+
+  <story>
+    <id type="integer">2</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/2</url>
+    <estimate type="integer">-1</estimate>
+    <current_state>unscheduled</current_state>
+    <description>  In order to defend my ship,
+  as a Captain, I want
+  to be able to shoot torpedoes
+
+  Scenario:  Fire Torpedoes
+    Given an other starship nearby
+    And I've ordered weapons-lock
+    When I give the Fire command
+    Then torpedoes are lanched
+    And the other starship is hit
+
+  Scenario:  Launch from Torpedoe Tube
+    Given a warhead-less torpedoe
+    And it is loaded in the torpedoe tubes
+    And a destination course has been set
+    When I give the Fire command
+    The torpedoe is launched
+    And it doesn't explode
+    And it travels to its destination
+
+# Hey, look, some end-of-file comments.....
+</description>
+    <name>Fire photon torpedoes</name>
+    <requested_by>James Kirk</requested_by>
+    <created_at type="datetime">2009/03/27 01:37:59 GMT</created_at>
+  </story>
+
+
+  <story>
+    <id type="integer">3</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/3</url>
+    <estimate type="integer">2</estimate>
+    <current_state>unstarted</current_state>
+    <description>  Scenario: Travel Faster than Light
+    Given a previous course order
+    When I say "Engage"
+    Then there will be streaky lights in the screen
+</description>
+    <name>Warp Factor One</name>
+    <requested_by>Jean Luc Piccard</requested_by>
+    <owned_by>Cmdr. Data</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>3</number>
+      <start type="datetime">2008/10/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/10/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>TNG</labels>
+  </story>
+
+
+  <story>
+    <id type="integer">4</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/4</url>
+    <estimate type="integer">0</estimate>
+    <current_state>finished</current_state>
+    <description>  Scenario: Yet More Starship Navigation
+</description>
+    <name>Feature 4</name>
+    <requested_by>Jean Luc Piccard</requested_by>
+    <owned_by>Cmdr. Data</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>3</number>
+      <start type="datetime">2008/10/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/10/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>TNG</labels>
+  </story>
+
+
+  <story>
+    <id type="integer">5</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/5</url>
+    <estimate type="integer">3</estimate>
+    <current_state>started</current_state>
+    <description>  Scenario: Last, best hope for peace
+
+  Scenario: Last, best hope for victory
+
+</description>
+    <name>Babylon 5</name>
+    <requested_by>History Itself</requested_by>
+    <owned_by>EarthGov</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>4</number>
+      <start type="datetime">2008/10/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/10/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>B5</labels>
+  </story>
+
+
+  <story>
+    <id type="integer">6</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/6</url>
+    <estimate type="integer">2</estimate>
+    <current_state>delivered</current_state>
+    <description>  Scenario: Access Defense Mainframe
+</description>
+    <name>Six's Secret Mission</name>
+    <requested_by>The Cylon</requested_by>
+    <owned_by>Gaius Baltar</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>1</number>
+      <start type="datetime">2008/10/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/10/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>BSG</labels>
+  </story>
+
+
+  <story>
+    <id type="integer">7</id>
+    <story_type>feature</story_type>
+    <url>http://www.pivotaltracker.com/story/show/7</url>
+    <estimate type="integer">1</estimate>
+    <current_state>rejected</current_state>
+    <description>  Scenario: No Nukes In Space
+    Given Suicidal Cold War
+    When I Stop Deployment of Space Weapons
+    Then the Human Race Should Survive the '60s
+</description>
+    <name>Assignment: Earth</name>
+    <requested_by>Aegis</requested_by>
+    <owned_by>Gary Seven</owned_by>
+    <created_at type="datetime">2008/12/10 00:00:00 UTC</created_at>
+    <accepted_at type="datetime">2008/12/10 00:00:00 UTC</accepted_at>
+    <iteration>
+      <number>2</number>
+      <start type="datetime">2008/10/15 00:00:02 UTC</start>
+      <finish type="datetime">2008/10/29 00:00:02 UTC</finish>
+    </iteration>
+    <labels>label 1</labels>
+  </story>
+</stories>

@@ -37,10 +37,10 @@ describe Pickler, "when pushing a new .feature file" do
     # make a mock to check our POST data; has to handle all requests
     # because 'tracker.rb' only creates one 'http' instance and caches it
     mockHttp = mock("Mock-HTTP")
-    # first request is to get project info
+    # don't care about requests to get project info
     mockHttp.stub!(:request).and_return(
       FakeWeb.response_for(:get, @domain + @project1Path) )
-    # second request is for "push" under test, check POST body content
+    # POST request is for "push" under test, check body content
     mockHttp.should_receive(:request).once.with(
       anything(), %r%<name>Fire photon torpedoes</name>% ).and_return(
         FakeWeb.response_for(:post, @domain + @storiesPath) )

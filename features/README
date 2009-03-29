@@ -1,0 +1,13 @@
+This directory contains test data files (*.feature.original) used by
+Pickler's RSpec test suite (see "../spec").  Pickler is *not* tested
+using Cucumber, and there are no Cucumbers for testing Pickler's
+functionality in this directory.
+
+During test execution, Pickler will read, write, and remove *.feature
+files in this directory.  Do not create files in this directory with a
+bare ".feature" extension if they are expected to be preserved across
+test runs or maintained in Git.
+
+In fact, Pickler's .gitignore prevents *.feature files in/below this
+directory from being archived, so that transient test data will not be
+caught in commit operations.
