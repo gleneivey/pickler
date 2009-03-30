@@ -44,13 +44,13 @@ describe Pickler, "when pulling all features from Tracker" do
     rescue SystemExit
     end
 
-    File.exist?( @features_path + "2.feature" ).should be_false
-    File.exist?( @features_path + "3.feature" ).should be_false
-    File.exist?( @features_path + "8.feature" ).should be_false
-    File.exist?( @features_path + "9.feature" ).should be_false
-    [ 1, 4, 5, 6, 7 ].each do |feat|
-      File.readlines( @features_path + feat.to_s + ".feature").should eql(
-        File.readlines( @features_path + feat.to_s + ".feature.original") )
+    pickler_output_file_for_feature(2).should_not exist
+    pickler_output_file_for_feature(3).should_not exist
+    pickler_output_file_for_feature(8).should_not exist
+    pickler_output_file_for_feature(9).should_not exist
+    [ 1, 4, 5, 6, 7 ].each do |story_num|
+      pickler_output_content_for_feature(story_num).should eql(
+        expected_content_for_feature(story_num) )
     end
   end
 
@@ -61,11 +61,11 @@ describe Pickler, "when pulling all features from Tracker" do
     rescue SystemExit
     end
 
-    File.exist?( @features_path + "8.feature" ).should be_false
-    File.exist?( @features_path + "9.feature" ).should be_false
-    (1..7).each do |feat|
-      File.readlines( @features_path + feat.to_s + ".feature").should eql(
-        File.readlines( @features_path + feat.to_s + ".feature.original") )
+    pickler_output_file_for_feature(8).should_not exist
+    pickler_output_file_for_feature(9).should_not exist
+    (1..7).each do |story_num|
+      pickler_output_content_for_feature(story_num).should eql(
+        expected_content_for_feature(story_num) )
     end
   end
 
@@ -88,11 +88,11 @@ describe Pickler, "when pulling all features from Tracker" do
     rescue SystemExit
     end
 
-    File.exist?( @features_path + "2.feature" ).should be_false
-    File.exist?( @features_path + "3.feature" ).should be_false
-    [ 1, 4, 5, 6, 7, 8 ].each do |feat|
-      File.readlines( @features_path + feat.to_s + ".feature").should eql(
-        File.readlines( @features_path + feat.to_s + ".feature.original") )
+    pickler_output_file_for_feature(2).should_not exist
+    pickler_output_file_for_feature(3).should_not exist
+    [ 1, 4, 5, 6, 7, 8 ].each do |story_num|
+      pickler_output_content_for_feature(story_num).should eql(
+        expected_content_for_feature(story_num) )
     end
   end
 
@@ -114,5 +114,21 @@ private
 
     # use our mock for HTTP access attempts
     Net::HTTP.should_receive(:new).and_return(mock_http)
+  end
+
+  def pickler_output_content_for_feature(story_num)
+    File.readlines(@features_path + story_num.to_s + ".feature")
+  end
+
+  def expected_content_for_feature(story_num)
+    File.readlines(@features_path + story_num.to_s + ".feature.original")
+  end
+
+  class FileName
+    def initialize(path) @path= path;       end
+    def exist?()         File.exist? @path; end
+  end
+  def pickler_output_file_for_feature(story_num)
+    FileName.new(@features_path + story_num.to_s + ".feature")
   end
 end

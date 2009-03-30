@@ -59,7 +59,13 @@ describe Pickler, "when pushing a new .feature file" do
     rescue SystemExit
     end
 
-    File.open(@test_feature_path).gets.chomp.should eql(
+    first_line_of_pickler_output_feature_file.should eql(
       "# http://www.pivotaltracker.com/story/show/535216" )
+  end
+
+private
+
+  def first_line_of_pickler_output_feature_file
+    File.open(@test_feature_path).gets.chomp
   end
 end
