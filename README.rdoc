@@ -25,13 +25,45 @@ feature's body.  Keep this in mind when entering stories into Pivotal Tracker.
 
 == Usage
 
-  pickler pull
+  pickler pull [--any-state] [--any-description] [story [story...]]
 
 Download all well formed stories to the features/ directory.
 
-  pickler push
+Unless a story is explicitly named on the command line, or an option
+is specified, pickler filters the stories pull'ed using several
+criteria.  First, Tracker stories that are in the "unscheduled" or
+"unstared" states are not pulled.  (This behavior can be overridden
+with the "--any-state" option.)
+
+Second, the Tracker story's description must contain at least one
+"Scenario:" clause, and the entire content of the description must be
+a valid Cucumber feature (less the "Feature:" line).  If, once a
+"Feature:" line created from the story's name is added to the story's
+description, the entire block cannot be successfully parsed by
+Cucumber, then a .feature file will not be written for the story.
+(This check can be overridden with the "--any-description" option.)
+
+Note that previously unseen stories will be given a numeric file name
+(that you are encouraged to change), and placed directly below the
+features/ directory (though they may be moved under features/stories).
+
+  pickler push [story [story...]]
 
 Upload all features with a tracker url in a comment on the first line.
+
+This will operate on all ".feature" files under your features/
+directory, regardless of directory nesting depth.  Files whose first
+line is not a comment (either blank or containing the tracker /story/
+URL for the feature) will be ignored.  In addition, to be pushed, the
+file's first non-comment, non-blank line must start with the word
+"Feature:" followed by the string that will be used as the story's
+name.  Files whose first "active" line is anything other than a
+Feature name will not be pushed.
+
+Note that new stories (.feature files pushed for the first time) will
+be given the Tracker state "unscheduled".  Which means that, by
+default, they will not be downloaded by future "pickler pull" commands
+unless explicitly named on the command line.
 
   pickler search <query>
 
