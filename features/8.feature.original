@@ -1,0 +1,5 @@
+# http://www.pivotaltracker.com/story/show/8
+Feature: Not for Cucumber
+  Scenario: Actually, not a scenario
+    Given that I'm a little confused
+    I write a badly-formed story

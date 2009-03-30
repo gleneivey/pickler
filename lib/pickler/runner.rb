@@ -319,8 +319,18 @@ Previously unseen stories will be given a numeric filename that you are
 encouraged to change.
       EOF
 
+      on "--any-state", "also pull 'unscheduled' and 'unstarted' stories" do
+        @any_state = true
+      end
+
+      on "--any-description",
+         "write files even for stories that won't work with Cucumber" do
+        @any_description = true
+      end
+
       process do |*args|
-        args.replace(pickler.scenario_features) if args.empty?
+        args.replace(pickler.scenario_features(@any_state, @any_description)
+                     ) if args.empty?
         args.each do |arg|
           pickler.feature(arg).pull
         end

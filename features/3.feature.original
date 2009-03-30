@@ -1,0 +1,6 @@
+# http://www.pivotaltracker.com/story/show/3
+Feature: Warp Factor One
+  Scenario: Travel Faster than Light
+    Given a previous course order
+    When I say "Engage"
+    Then there will be streaky lights in the screen

@@ -118,12 +118,20 @@ class Pickler
     Dir[features_path('**','*.feature')].map {|f|feature(f)}.select {|f|f.pushable?}
   end
 
-  def scenario_features
-    project.stories(scenario_word, :includedone => true).reject do |s|
-      [ 'unscheduled', 'unstarted' ].include?(s.current_state)
-    end.select do |s|
-      s.to_s =~ /^\s*#{Regexp.escape(scenario_word)}:/ && parser.parse(s.to_s)
+  def scenario_features(any_state, any_description)
+    if any_description
+      stories = project.stories(:includedone => true)
+    else
+      stories = project.stories(scenario_word, :includedone => true)
     end
+    stories.reject! do |s|
+      [ 'unscheduled', 'unstarted' ].include?(s.current_state)
+    end unless any_state
+    stories.reject! do |s|
+      s.to_s !~ /^\s*#{Regexp.escape(scenario_word)}:/ ||
+        parser.parse(s.to_s).nil?
+    end unless any_description
+    stories
   end
 
   def feature(string)
